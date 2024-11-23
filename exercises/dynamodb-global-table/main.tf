@@ -23,3 +23,15 @@ resource "aws_dynamodb_table" "my_dynamo_db" {
     region_name = "us-east-2"
   }
 }
+
+resource "aws_dynamodb_table_item" "course_item" {
+  table_name = aws_dynamodb_table.my_dynamo_db.name
+  hash_key   = aws_dynamodb_table.my_dynamo_db.hash_key
+
+  item = jsonencode({
+    "course_id": {"S": "cd1908"},
+    "course_name": {"S": "Cloud Development"},
+    "instructor": {"S": "John Doe"},
+    "year": {"N": "2023"}
+  })
+}
