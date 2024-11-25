@@ -1,8 +1,4 @@
 
-
-Now let's create the Terraform files:
-
-```hcl:aws-cloud-architect-recoverability-in-aws/exercise-cloudfront-dr/terraform/main.tf
 provider "aws" {
   region = "us-east-1"
 }
