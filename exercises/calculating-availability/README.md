@@ -53,3 +53,9 @@ Transparency commitments:
 - Monthly availability metrics publication
 - Major incident communication within 1 hour
 - Post-mortem reports for significant outages
+
+To create this exercise structure, run:
+
+
+mkdir -p exercises/rds-point-in-time-recovery
+
