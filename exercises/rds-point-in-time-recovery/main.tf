@@ -1,6 +1,25 @@
-
 provider "aws" {
   region = "us-east-1"
+}
+
+resource "aws_security_group" "rds_sg" {
+  name        = "rds-mysql-access"
+  description = "Allow MySQL inbound traffic"
+
+  ingress {
+    description = "MySQL from anywhere"
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 }
 
 resource "aws_db_instance" "rpo_demo" {
@@ -19,8 +38,8 @@ resource "aws_db_instance" "rpo_demo" {
   maintenance_window     = "Mon:04:00-Mon:05:00"
   
   skip_final_snapshot    = true
+  vpc_security_group_ids = [aws_security_group.rds_sg.id]
   
-  # Enable point-in-time recovery
   copy_tags_to_snapshot = true
 }
 
