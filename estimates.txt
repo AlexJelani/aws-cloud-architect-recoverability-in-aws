@@ -1,0 +1,13 @@
+RTO and RPO Estimates for Multi-AZ, Multi-Region Database Configuration
+
+1. Minimum RTO for a single AZ outage:
+The Recovery Time Objective for a single AZ outage is approximately 1-2 minutes. This is because Multi-AZ deployments use synchronous replication and AWS automatically handles failover to the standby instance when needed.
+
+2. Minimum RTO for a single region outage:
+For a region outage, the RTO is approximately 5-10 minutes. This involves promoting the read replica in the secondary region to become the primary instance, updating DNS entries, and reconfiguring application connection strings.
+
+3. Minimum RPO for a single AZ outage:
+The Recovery Point Objective for an AZ outage is 0 data loss. Multi-AZ deployments use synchronous replication, ensuring the standby instance is always up-to-date with the primary.
+
+4. Minimum RPO for a single region outage:
+The RPO for a region outage is typically seconds of data loss. Cross-region read replicas use asynchronous replication, so there may be a brief replication lag between primary and secondary regions.

@@ -1,0 +1,30 @@
+{
+    "DBSubnetGroup": {
+        "DBSubnetGroupName": "secondary-subnet-group",
+        "DBSubnetGroupDescription": "Secondary DB subnet group",
+        "VpcId": "vpc-0fef29b64ba5859aa",
+        "SubnetGroupStatus": "Complete",
+        "Subnets": [
+            {
+                "SubnetIdentifier": "subnet-0ca9586ae850cbd44",
+                "SubnetAvailabilityZone": {
+                    "Name": "us-west-2b"
+                },
+                "SubnetOutpost": {},
+                "SubnetStatus": "Active"
+            },
+            {
+                "SubnetIdentifier": "subnet-02995a99e15db786c",
+                "SubnetAvailabilityZone": {
+                    "Name": "us-west-2a"
+                },
+                "SubnetOutpost": {},
+                "SubnetStatus": "Active"
+            }
+        ],
+        "DBSubnetGroupArn": "arn:aws:rds:us-west-2:825567264691:subgrp:secondary-subnet-group",
+        "SupportedNetworkTypes": [
+            "IPV4"
+        ]
+    }
+}

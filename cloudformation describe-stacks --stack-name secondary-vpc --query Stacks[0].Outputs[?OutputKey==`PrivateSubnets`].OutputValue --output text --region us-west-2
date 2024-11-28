@@ -1,0 +1,30 @@
+{
+    "DBSubnetGroup": {
+        "DBSubnetGroupName": "primary-subnet-group",
+        "DBSubnetGroupDescription": "Primary DB subnet group",
+        "VpcId": "vpc-0cbc2a3c041fa6ca4",
+        "SubnetGroupStatus": "Complete",
+        "Subnets": [
+            {
+                "SubnetIdentifier": "subnet-0f62b6a4ed3c5f0bb",
+                "SubnetAvailabilityZone": {
+                    "Name": "us-east-1b"
+                },
+                "SubnetOutpost": {},
+                "SubnetStatus": "Active"
+            },
+            {
+                "SubnetIdentifier": "subnet-07f8ef065c1dd6e29",
+                "SubnetAvailabilityZone": {
+                    "Name": "us-east-1a"
+                },
+                "SubnetOutpost": {},
+                "SubnetStatus": "Active"
+            }
+        ],
+        "DBSubnetGroupArn": "arn:aws:rds:us-east-1:825567264691:subgrp:primary-subnet-group",
+        "SupportedNetworkTypes": [
+            "IPV4"
+        ]
+    }
+}

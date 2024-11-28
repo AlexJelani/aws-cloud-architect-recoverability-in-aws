@@ -1,0 +1,25 @@
+MySQL Database Connection and Operations Log
+
+$ mysql -h primary-mysql.cuvxhnm5pkhu.us-east-1.rds.amazonaws.com -u admin -p udacity
+Enter password: ********
+
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 330
+Server version: 8.0.39 Source distribution
+
+MySQL [udacity]> CREATE TABLE test (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50)
+);
+Query OK, 0 rows affected (0.091 sec)
+
+MySQL [udacity]> INSERT INTO test (name) VALUES ('Hello from primary');
+Query OK, 1 row affected (0.011 sec)
+
+MySQL [udacity]> SELECT * FROM test;
++----+--------------------+
+| id | name               |
++----+--------------------+
+|  1 | Hello from primary |
++----+--------------------+
+1 row in set (0.001 sec)

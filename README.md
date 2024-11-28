@@ -49,11 +49,12 @@ In order to achieve the highest levels of durability and availability in AWS you
 
 
 ### Highly durable RDS Database
-1. Create a new RDS Subnet group in the active and standby region.
+1. Create a new RDS Subnet group in the active and standby region. done
 2. Create a new MySQL, multi-AZ database in the active region. The database must:
      - Be a “burstable” instance class.
      - Have only the “UDARR-Database” security group.
      - Have an initial database called “udacity.”
+     done
 3. Create a read replica database in the standby region. This database has the same requirements as the database in the active region. 
 
 **SAVE** screenshots of the configuration of the databases in the active and secondary region after they are created. 
