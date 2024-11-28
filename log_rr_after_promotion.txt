@@ -1,0 +1,10 @@
+mysql -h secondary-mysql.c11iu29i9zip.us-west-2.rds.amazonaws.com -u admin -p udacity
+
+CREATE TABLE promotion_test (id INT, data VARCHAR(50));
+INSERT INTO promotion_test VALUES (1, 'Write test successful');
+SELECT * FROM promotion_test;
++------+-----------------------+
+| id   | data                  |
++------+-----------------------+
+|    1 | Write test successful |
++------+-----------------------+
