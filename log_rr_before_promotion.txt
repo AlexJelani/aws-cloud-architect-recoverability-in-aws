@@ -1,0 +1,14 @@
+MySQL Database Connection and Operations Log - Read Replica Before Promotion
+
+$ mysql -h secondary-mysql.c11iu29i9zip.us-west-2.rds.amazonaws.com -u admin -p udacity
+
+MySQL [udacity]> SELECT * FROM test;
++----+--------------------+
+| id | name               |
++----+--------------------+
+|  1 | Hello from primary |
++----+--------------------+
+1 row in set (0.002 sec)
+
+MySQL [udacity]> INSERT INTO test (name) VALUES ('Hello from secondary');
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
