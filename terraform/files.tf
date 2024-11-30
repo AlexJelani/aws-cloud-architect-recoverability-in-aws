@@ -12,3 +12,4 @@ resource "aws_s3_object" "winter_image" {
   source       = "../s3/winter.jpg"
   content_type = "image/jpeg"
 }
+# }
