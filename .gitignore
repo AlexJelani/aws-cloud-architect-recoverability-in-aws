@@ -13,6 +13,10 @@ crash.*.log
 *.tfvars
 *.tfvars.json
 
+cloudformation*
+ec2*
+rds*
+
 # Override files
 override.tf
 override.tf.json
