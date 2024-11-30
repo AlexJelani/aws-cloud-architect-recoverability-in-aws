@@ -15,7 +15,7 @@ crash.*.log
 *describe-stacks*
 *describe-instances*
 
-cloudformation*
+*cloudformation*
 ec2*
 rds*
 
