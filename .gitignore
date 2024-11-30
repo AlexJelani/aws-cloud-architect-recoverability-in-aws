@@ -12,6 +12,8 @@ crash.*.log
 # Exclude sensitive variables files
 *.tfvars
 *.tfvars.json
+*describe-stacks*
+*describe-instances*
 
 cloudformation*
 ec2*
