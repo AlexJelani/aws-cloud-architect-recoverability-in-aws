@@ -11,5 +11,5 @@ resource "aws_s3_object" "winter_image" {
   key          = "winter.jpg"
   source       = "../s3/winter.jpg"
   content_type = "image/jpeg"
+  acl          = "public-read"
 }
-# }
