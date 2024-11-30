@@ -3,6 +3,7 @@ resource "aws_s3_object" "index" {
   key          = "index.html"
   source       = "../s3/index.html"
   content_type = "text/html"
+  etag         = filemd5("../s3/index.html")  # Add this line to detect content changes
 }
 
 resource "aws_s3_object" "winter_image" {
