@@ -1,4 +1,4 @@
-{
+#{
     "DBSubnetGroup": {
         "DBSubnetGroupName": "primary-subnet-group",
         "DBSubnetGroupDescription": "Primary DB subnet group",
@@ -27,4 +27,5 @@
             "IPV4"
         ]
     }
+
 }

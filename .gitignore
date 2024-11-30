@@ -7374,3 +7374,11 @@ aws/README.md
 aws/install
 primary-key.pem
 secondary-key.pem
+cloudformation describe-stacks --stack-name secondary-vpc --query Stacks\[0].Outputs\[?OutputKey==`PrivateSubnets`].OutputValue --output text --region us-west-2
+cloudformation describe-stacks --stack-name primary-vpc-stack --query Stacks\[0].Outputs\[?OutputKey==`DatabaseSecurityGroup`].OutputValue --output text --region us-east-1
+cloudformation describe-stacks --stack-name primary-vpc-stack --query Stacks\[0].Outputs\[?OutputKey==`DatabaseSecurityGroup`].OutputValue --output text --region us-east-1
+ec2 describe-instances --filters Name=reservation-id,Values=r-00b9f4c0972cf2ce2 --query Reservations\[0].Instances\[0].State.Name --region us-east-1
+cloudformation describe-stacks --stack-name primary-vpc-stack --query Stacks\[0].Outputs\[?OutputKey==`DatabaseSecurityGroup`].OutputValue --output text --region us-east-1
+cloudformation describe-stacks --stack-name secondary-vpc --query Stacks\[0].Outputs\[?OutputKey==`PrivateSubnets`].OutputValue --output text --region us-west-2
+ec2 describe-instances --filters Name=reservation-id,Values=r-00b9f4c0972cf2ce2 --query Reservations\[0].Instances\[0].State.Name --region us-east-1
+rds create-db-instance-read-replica /

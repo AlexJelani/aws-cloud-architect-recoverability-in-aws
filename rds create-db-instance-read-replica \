@@ -1,4 +1,4 @@
-{
+#{
     "DBInstance": {
         "DBInstanceIdentifier": "primary-mysql",
         "DBInstanceClass": "db.t3.micro",
