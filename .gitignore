@@ -7384,3 +7384,15 @@ cloudformation describe-stacks --stack-name primary-vpc-stack --query Stacks\[0]
 cloudformation describe-stacks --stack-name secondary-vpc --query Stacks\[0].Outputs\[?OutputKey==`PrivateSubnets`].OutputValue --output text --region us-west-2
 ec2 describe-instances --filters Name=reservation-id,Values=r-00b9f4c0972cf2ce2 --query Reservations\[0].Instances\[0].State.Name --region us-east-1
 rds create-db-instance-read-replica /
+standby-key-final.pem
+standby-region-key.pem
+sessionmanager-bundle.zip
+sessionmanager-bundle/install
+sessionmanager-bundle/LICENSE
+sessionmanager-bundle/NOTICE
+sessionmanager-bundle/README.md
+sessionmanager-bundle/RELEASENOTES.md
+sessionmanager-bundle/seelog.xml.template
+sessionmanager-bundle/THIRD-PARTY
+sessionmanager-bundle/VERSION
+sessionmanager-bundle/bin/session-manager-plugin
